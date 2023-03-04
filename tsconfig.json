@@ -40,6 +40,6 @@
     "preserveConstEnums": false,
     "newLine": "LF",
     "traceResolution": false,
-    "module": "commonjs",
+    "module": "esnext",
   }
 }

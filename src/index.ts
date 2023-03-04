@@ -2,6 +2,7 @@
 /* eslint-disable no-async-promise-executor */
 import { Worker, WorkerOptions, isMainThread, parentPort } from 'worker_threads';
 import * as path from 'path';
+import { fileURLToPath } from 'url';
 
 export const INTERNAL = '__blue-collar-state__';
 
@@ -97,8 +98,10 @@ export class WorkerClass {
       animationFrameRef: 0,
       callbacks: {} as TypedCallbacks<this>,
     };
+
+    filePath = filePath.startsWith('file:/') ? fileURLToPath(filePath) : filePath;
     if (isMainThread) {
-      this[INTERNAL].worker = new Worker(path.join(path.dirname(__filename), 'spawn.js'), {
+      this[INTERNAL].worker = new Worker(path.join(path.dirname(fileURLToPath(import.meta.url)), 'spawn.js'), {
         ...options,
         workerData: [ filePath, args ],
       });

@@ -1,8 +1,9 @@
 {
   "name": "blue-collar",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
+  "type": "module",
   "description": "Hard Working Worker Classes",
   "scripts": {
     "build": "rm -rf dist && tsc --b tsconfig.json",
@@ -29,20 +30,20 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.2.0",
-    "@commitlint/config-conventional": "^8.2.0",
-    "@types/mocha": "^8.2.0",
-    "@types/node": "12.7.5",
-    "@typescript-eslint/eslint-plugin": "^5.27.0",
-    "@typescript-eslint/parser": "^5.27.0",
-    "eslint": "8.16.0",
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "18.14.6",
+    "@typescript-eslint/eslint-plugin": "^5.54.0",
+    "@typescript-eslint/parser": "^5.54.0",
+    "eslint": "^8.35.0",
     "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-n": "^15.2.1",
     "eslint-plugin-promise": "^6.0.0",
-    "husky": "^3.0.9",
-    "mocha": "^8.2.1",
-    "typescript": "^4.1.3",
+    "husky": "^8.0.3",
+    "mocha": "^10.2.0",
+    "typescript": "^4.9.5",
     "watch": "^1.0.2"
   }
 }

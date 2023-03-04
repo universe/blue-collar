@@ -1,6 +1,6 @@
 import WorkerClass, { main, worker } from '../src/index.js';
 
-export default class MyWorker extends WorkerClass(__filename) {
+export default class MyWorker extends WorkerClass(import.meta.url) {
   counter = 0;
   constructor(init = 0) { super(init); this.counter = init; }
   @worker async getWorkerCounter() { return this.counter; }
